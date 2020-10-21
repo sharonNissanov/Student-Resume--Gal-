@@ -1,0 +1,104 @@
+.FirstPage{
+    cursor:pointer;
+    color:black;
+    position: absolute  ; 
+     top:30%;
+    left: 40%;
+    transform: translate(-30%, -30%);
+
+    /* margin: auto;    
+    display: block;
+    position: relative !important;
+    z-index: -1; */
+}
+.menu-item{
+  color: white;
+}
+  .FullResume{
+    background-color : black;
+    /* height: 130vh; */
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    top:0;
+    left:0;
+    /* top:40vh;
+    left: 40vh;
+    transform: translate(-40vh, -30vh);  */
+    /* top:40%;
+    left: 40%;
+    transform: translate(-40%, -30%); */
+  }
+  .About{
+    position: fixed;
+    /* height: 100vh; */
+    background-color : black;
+    top:30%;
+    left: 40%;
+    transform: translate(-30%, -30%);
+    /* font-size: 100px;
+    size: 100px; */
+    }
+
+
+  /* @media screen and (min-width: 760px) {
+    .About {
+      font-size: 100px;
+    }
+  } */
+  /* @media screen and (min-width: 768px) {
+    .About {
+      font-size: 40px;
+    }
+  } */
+
+
+  .WorkEx{
+    /* height:auto; */
+  }
+
+  .ParticlesCanvas{
+    width:100%;
+    min-height: 150%;
+    
+     position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: black;
+     /* position: relative ; */
+    /* min-height: 100vh; */
+    /* z-index: -1 !important;  */
+
+  }
+
+  .BottomBar{
+    width: 100%;
+    color:black;
+    position:fixed;
+    bottom:0;
+  }
+
+  .Icons{
+    margin-right: 20px;
+    padding: 0;
+     display: inline;
+  
+  }
+
+  .scrollTop {
+    position: fixed; 
+    width: 100%;
+    bottom: 60px;
+    height: 40px;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    }
+  
+  .scrollTop:hover{
+    opacity: 1;
+  }
+  
+  
