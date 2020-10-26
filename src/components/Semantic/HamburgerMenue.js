@@ -1,5 +1,5 @@
 import React from 'react';
-import { pushRotate as Menu } from 'react-burger-menu'
+import { slide as Menu } from 'react-burger-menu'
 import './Semantic.css'
 import FirstPage from './FirstPage';
 import About  from '../Resume/About';
@@ -8,48 +8,131 @@ import BottomBar from './BottomBar';
 import FullResume from '../Resume/FullResume';
 import App from '../App';
 import ScrollDowmBtn from './ScrollDowmBtn'
+import LanguageDropdown from './LanguageDropdown'
+import {Button,Icon} from 'semantic-ui-react'
+import { Switch,Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import EnglishCV from '../pictures_files/EnglishCV.pdf'
+import HebrewCV from '../pictures_files/HebrewCV.pdf'
+import BottomMenue from './BottomMenue'
 
 export default class HamburgerMenue extends React.Component {
-    state={ location:"Home"}
+    state={ location:"Home", chosen_language:null}
     
-   change_location(new_location){
+    componentDidMount()
+    {
+      try{ 
+        const check_lan = localStorage.getItem("Language");
+         if(check_lan===null)
+         {   
+           localStorage.setItem("Language", "English");
+         }
+         if(check_lan!==null)
+         {   
+          this.setState({chosen_language:check_lan,})
+         }
 
+       }catch(e){
+           console.log(e)
+         } 
+    }
+   change_location(new_location){
+    //e.preventDefault();
       this.setState({location: new_location})
+      // window.location.reload()
+
     }
-    showSettings (event) {
-      event.preventDefault();
-    }
-  
+    change_lan(){
+      try{ 
+        const check_lan = localStorage.getItem("Language");
+        if(check_lan==="English")
+        { 
+          localStorage.removeItem("Language") 
+          localStorage.setItem("Language", "Hebrew");
+        }
+        if(check_lan==="Hebrew")
+        {
+          localStorage.removeItem("Language") 
+          localStorage.setItem("Language", "English");
+        }
+       window.location.reload()
+      }  
+
+         catch(e){
+           console.log(e)
+         }  // window.location.reload()
+       }
+     
+      
+    
+
  
     render () {
-        const { location } = this.state
+        const { location, chosen_language} = this.state
       return (
         <div>  
-       
-        <Menu right styles={styles}
+      
+
+      <App/>  
+
+        <Menu right styles={styles}   isOpen={ false }
         width={120}
         height={50}
         strokeWidth={623}
         rotate={0.5}
-        color='white'
-        borderRadius={0}
-   > 
-          <a onClick={()=>this.change_location("Home")} className="menu-item"  >Home</a>
-          <a onClick={()=>this.change_location("About")} className="menu-item" >About</a>
-          <a onClick={()=>this.change_location("Resume")}  className="menu-item">Resume</a>
-          <a onClick={ this.showSettings } className="menu-item--small">Download</a>
+
+    
+        >
+          <br></br>
+
+
+   {chosen_language==="English"? <a className="menu-item1" href="/"><Icon name="home"/> Home</a> : 
+   <a className="menu-item1" href="/">בית <Icon name="home"/></a> }
+
+
+  {chosen_language==="English"? <a className="menu-item2"   href="/About"><Icon name="info"/> About</a> : 
+   <a className="menu-item2" href="/About" > על עצמי  <Icon name="info"/></a> }
+
+
+  {chosen_language==="English"? <a className="menu-item3"   href="/Resume"><Icon name="file"/> Resume</a> : 
+   <a className="menu-item3" href="/Resume" > קורות חיים  <Icon name="file"/></a> }
+
+
+{chosen_language==="English"? <a className="menu-item4"  href={EnglishCV}  download ><Icon name="download"/> Download My CV</a> : 
+   <a className="menu-item4"  href={HebrewCV}  download > הורדת קורות החיים  <Icon name="download"/></a> }
+
+
+{chosen_language==="English"? <a className="menu-item5"  onClick={()=>{this.change_lan()}} href={"/"} ><Icon name="hello"/>עברית</a> : 
+   <a className="menu-item5" onClick={()=>{this.change_lan()}}  href={"/"}   > English<Icon name="hello"/></a> }
+
+
+
+{chosen_language==="English"? <a className="menu-item6" onClick={()=>{window.open("https://sharon-nissanov.com/") } }  ><Icon name="copyright"/> Sharon Nissanov 2020</a> : 
+   <a className="menu-item6" onClick={()=>{window.open("https://sharon-nissanov.com/") } } > שרון ניסנוב 2020 <Icon name="copyright"/></a> }
+
+
 
         </Menu>
-        <App/> 
-        {/* <ScrollDowmBtn/> */}
-        
-        {location==='Home'? <FirstPage/> : null}
-        {location==='Resume'?<FullResume/>: null}
-        {location==='About'? <About/>: null}
        
-     
-        <BottomBar/>
+        <App/>  
+        {/* <ScrollDowmBtn/> */}
+        <Router>  
+        <Switch>
+        <Route exact path="/" component={FirstPage} />
+        <Route path="/Resume" component={FullResume} />
+        <Route path="/About" component={About} />
 
+      </Switch>
+      </Router>
+
+
+       
+
+
+
+
+     
+         {/* <BottomMenue/> */}
+        {/* <LanguageDropdown/> */}
         </div>
       );
     }
@@ -58,51 +141,64 @@ export default class HamburgerMenue extends React.Component {
   var styles = {
     bmBurgerButton: {
       position: 'fixed',
-      width: '36px',
-      height: '30px',
-      right: '40px',
-      top: '36px',
-    
+      width: '38px',
+      height: '34px',
+      right: '20px',
+      top: '10px',
+  
     },
     bmBurgerBars: {
-      background: 'white',
+       background: 'white',
+     // color:'white',
+     opacity:"0.7",
 
     },
     bmBurgerBarsHover: {
-      background: '#a90000'
+      //  backgrounColor: 'blue',
+      //  color:"blue",
+      background: 'black',
     },
     bmCrossButton: {
-      height: '24px',
-      width: '24px'
+      // height: '34px',
+      // width: '40px'
     },
     bmCross: {
-      background: '#bdc3c7'
+      // background: '#bdc3c7'
+      background: 'white',
+      height: '20px',
+      width: '7px'
     },
+    // bmCrossHover: {
+    //    background: '#bdc3c7',
+    //  // background: 'white',
+    //   height: '20px',
+    //   width: '7px'
+    // },
     bmMenuWrap: {
       position: 'fixed',
-      height: '100%'
+      height: '100%',
+      width:"160px",
+      
     },
     bmMenu: {
-     opacity:"0.9",
-      background: 'black',
-    //  background: '#373a47',
-      padding: '2.5em 1.5em 0',
+     opacity:"0.8",
+     //background: "rgb(215, 223, 205)",
+      //  background: 'grey',
+       background: '#373a47',
+      padding: '0.7em 0.4em ',
       fontSize: '1.15em',
 
     },
-    bmMorphShape: {
-      fill: '#373a47'
-    },
+    // bmMorphShape: {
+    //   fill: 'grey'
+    // },
     bmItemList: {
-      color: '#b8b7ad',
-      padding: '0.8em',
-
-    //   textAlign: "center",
-    //   alignItems: "center",
+      // color: '#b8b7ad',
+      padding: '0.2em',
+      textAlign:"center",
     },
     bmItem: {
       display: 'inline-block',
-
     },
     bmOverlay: {
       background: 'rgba(0, 0, 0, 0.3)'

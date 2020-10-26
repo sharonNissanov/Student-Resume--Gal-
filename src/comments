@@ -19,3 +19,8 @@ npm i @artsy/fresnel -----------
 
 
 npm i react-device-detect
+
+
+npm install --save react-router-dom
+
+

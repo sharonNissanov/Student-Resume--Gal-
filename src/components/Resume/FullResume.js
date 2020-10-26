@@ -5,57 +5,70 @@ import WorkEx from './WorkEx'
 import Languages from './Languages'
 import MilitaryService from './MilitaryService'
 import Education from './Education'
+import {isBrowser} from "react-device-detect";
+
+import { Container,Segment,Grid, Header , } from 'semantic-ui-react'
 
 
-import { Container,Segment,Grid} from 'semantic-ui-react'
+function FullResume() {
 
-const FullResume = () => (
-    <div className="FullResume" > 
-    <Container text>
-      <Segment.Group>
+  const [chosen_language , setChosen_language] = React.useState(null)
+  const [visible , setVisible] = React.useState(false)
+
+  React.useEffect(() => {
+
+    try{ 
+      const chosen_lan = localStorage.getItem("Language");
+      if(chosen_lan!==null){ 
+        setChosen_language(chosen_lan)
    
-    
-    
-    
-     
-      </Segment.Group>
-    </Container>
-  
-   
+      }
+    }catch(e){
+        console.log(e)
+    } 
+    setVisible(!visible) 
+  }, [setVisible]);
 
-    <Grid columns={2} container divided='vertically' stackable>
-      <Grid.Row>
+
+  return(
+    <div className={chosen_language==="English"?
+    
+    isBrowser?"FullResumeEnglishBrowser":"FullResumeEnglishMobile":
+    isBrowser?
+    "FullResumeHebrewBrowser" : "FullResumeHebrewMobile"} > 
+
+
+
+        <WorkEx/>
+        <Education/>
+        <MilitaryService/>
+        <Skills/>
+        <Languages/>
+        <div className="Space"></div>
+
+    
+{/* 
+    <Grid columns={2} container divided='vertically' stackable >
+   
         <Grid.Column>
           <WorkEx/>
-        </Grid.Column>
-        <Grid.Column>
-          <Skills/>
+          <Education/>
       
         </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
+
         <Grid.Column>
-          <Education/>
+          <Skills/>
+          <Languages/>
+          <MilitaryService/> <br></br>  <br></br>
         </Grid.Column>
-        <Grid.Column>
-        <MilitaryService/>
-        <Languages/>
-        </Grid.Column>
-      </Grid.Row>
-      <Grid.Row>
-        <Grid.Column>
-          {/* <Languages/> */}
-        </Grid.Column>
-        <Grid.Column>
-         
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
+   
+
+    </Grid> */}
 
 
 
   
      </div> 
 )
-
+}
 export default FullResume

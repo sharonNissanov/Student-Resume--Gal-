@@ -3,14 +3,14 @@ import Particless from "./Particless";
 
 const styles = {
     root: {
-      fontFamily: "sans-serif",
-      textAlign: "center",
-      height: "100%",
-      minWidth:"100%",
+      //textAlign: "center",
+       // height: "100%",
+      // minWidth:"100%",
       background: "black",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center"
+      // display: "flex",
+     //  justifyContent: "center",
+      // alignItems: "center"
+      position:"fixed"
     }
   };
   
