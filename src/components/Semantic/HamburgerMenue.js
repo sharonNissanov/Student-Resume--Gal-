@@ -3,7 +3,6 @@ import { slide as Menu } from 'react-burger-menu'
 import './Semantic.css'
 import FirstPage from './FirstPage';
 import About  from '../Resume/About';
-import ParticlesBack from '../ParticlesBack';
 import BottomBar from './BottomBar';
 import FullResume from '../Resume/FullResume';
 import App from '../App';

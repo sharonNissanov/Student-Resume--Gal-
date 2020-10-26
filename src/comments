@@ -24,3 +24,7 @@ npm i react-device-detect
 npm install --save react-router-dom
 
 
+npm i particles.js
+
+npm install react-tsparticles
+
