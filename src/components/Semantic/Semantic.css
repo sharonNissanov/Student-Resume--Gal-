@@ -135,6 +135,7 @@
     transform: translate(-50vh, 5vh);  
   }
   .FullResumeEnglishMobile{
+    /* background-color: black; */
     cursor:pointer;
     position: absolute ;
     top:5%;

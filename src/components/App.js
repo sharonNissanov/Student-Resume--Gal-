@@ -4,7 +4,7 @@ import Particless from "./Particless";
 const styles = {
     root: {
       //textAlign: "center",
-       // height: "100%",
+        height: "auto",
       // minWidth:"100%",
       background: "black",
       // display: "flex",
@@ -16,7 +16,7 @@ const styles = {
   
   const App = () => (
     <div style={styles.root}>
-      <Particless />
+      <Particless height="auto"/>
     </div>
   );
   export default App

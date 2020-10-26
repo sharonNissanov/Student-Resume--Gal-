@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import Particles from "react-particles-js";
 
 class Canvas extends Component {
-  state = { width: 0, height:"20px"};
+  state = { width: 0, height:0};
   componentDidMount() {
     this.updateWindowDimensions();
    // window.addEventListener("resize", this.updateWindowDimensions);
   }
   componentWillUnmount() {
-   // window.removeEventListener("resize", this.updateWindowDimensions);
+    //window.removeEventListener("resize", this.updateWindowDimensions);
   }
   updateWindowDimensions = () => {
     this.setState({
       width: window.innerWidth+"px",
-      height: window.innerHeight+"px"
+      height: window.innerHeight+ 35+ "px"
     });
   };
   render() {
@@ -21,31 +21,10 @@ class Canvas extends Component {
     console.log(width, height);
     return (
       <Particles
-
       
-    //   params={{
-    //     "particles": {
-    //         "number": {
-    //             "value": 50
-    //         },
-    //         "size": {
-    //             "value": 3
-    //         }
-    //     },
-    //     "interactivity": {
-    //         "events": {
-    //             "onhover": {
-    //                 "enable": true,
-    //                 "mode": "repulse"
-    //             }
-    //         }
-    //     }
-    // }}
-
-
-    //-------------------------------------
-        {...this.state}
+         {...this.state}
         params={{
+         
           particles: {
             number: {
               value: 30,

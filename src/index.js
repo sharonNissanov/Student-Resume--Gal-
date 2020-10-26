@@ -8,9 +8,12 @@ import App from './components/App'
 
 ReactDOM.render(
   <React.StrictMode>
-   <BottomMenue/><App/>
+       <App/>
+    <BottomMenue/>
+
    <HamburgerMenue/>
    
+ 
     
   </React.StrictMode>,
   document.getElementById('root')
