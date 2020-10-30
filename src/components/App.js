@@ -3,13 +3,8 @@ import Particless from "./Particless";
 
 const styles = {
     root: {
-      //textAlign: "center",
-        height: "auto",
-      // minWidth:"100%",
+      height: "auto",
       background: "black",
-      // display: "flex",
-     //  justifyContent: "center",
-      // alignItems: "center"
       position:"fixed"
     }
   };

@@ -1,13 +1,10 @@
 import React from 'react'
-import '../Semantic/Semantic.css';
 import Skills from './Skills'
 import WorkEx from './WorkEx'
 import Languages from './Languages'
 import MilitaryService from './MilitaryService'
 import Education from './Education'
 import {isBrowser} from "react-device-detect";
-
-import { Container,Segment,Grid, Header , } from 'semantic-ui-react'
 
 
 function FullResume() {
@@ -32,42 +29,15 @@ function FullResume() {
 
   return(
     <div className={chosen_language==="English"?
-    
     isBrowser?"FullResumeEnglishBrowser":"FullResumeEnglishMobile":
     isBrowser?
     "FullResumeHebrewBrowser" : "FullResumeHebrewMobile"} > 
-
-
-
         <WorkEx/>
         <Education/>
         <MilitaryService/>
         <Skills/>
         <Languages/>
         <div className="Space"></div>
-
-    
-{/* 
-    <Grid columns={2} container divided='vertically' stackable >
-   
-        <Grid.Column>
-          <WorkEx/>
-          <Education/>
-      
-        </Grid.Column>
-
-        <Grid.Column>
-          <Skills/>
-          <Languages/>
-          <MilitaryService/> <br></br>  <br></br>
-        </Grid.Column>
-   
-
-    </Grid> */}
-
-
-
-  
      </div> 
 )
 }

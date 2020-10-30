@@ -1,6 +1,4 @@
 import React from 'react'
-import { Header,Placeholder,Segment} from 'semantic-ui-react'
-import '../Semantic/Semantic.css';
 import {isMobile} from "react-device-detect";
 
 

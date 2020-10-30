@@ -1,7 +1,6 @@
 import React from 'react'
-import './Semantic.css';
-import { Header, Transition , Image,Grid} from 'semantic-ui-react'
-import gal from '../pictures_files/gal.jpeg'
+import { Header, Transition, Image,Grid} from 'semantic-ui-react'
+import gal from './pictures_files/gal.jpeg'
 import {isBrowser} from "react-device-detect";
 
 function FirstPage() {
@@ -37,11 +36,6 @@ function FirstPage() {
     basic:{
       color:"white", fontFamily:chosen_language==="English"?"Georgia":"Lucida Sans Unicode",textAlign:"center"
     },
-  
-  /*--------------------------------------------------------------------------- */
-  
-  
-  
   }
 
 
@@ -81,50 +75,44 @@ function FirstPage() {
 
       <Image src={gal} size={isBrowser? "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/>
    
-    </Grid.Column>
-    </Grid>
+      </Grid.Column>
+      </Grid>
 
-    </Transition>
+      </Transition>
 
-    // Hebrew
-    : <Transition visible={visible} animation='scale' duration={800} >  
-    <Grid container  columns={2} centered doubling  stackable 
-    textAlign="center" verticalAlign="middle">
+      // Hebrew
+      : <Transition visible={visible} animation='scale' duration={800} >  
+      <Grid container  columns={2} centered doubling  stackable 
+      textAlign="center" verticalAlign="middle">
 
-      {/* {isBrowser ?  */}
-      {/* <Grid.Column ><Image src={gal} size={isBrowser?  "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/></Grid.Column> */}
-      {/* :null} */}
 
-    <Grid.Column >
-      <Header  as='h1' style={styles.basic} size='huge'> 
-      {isBrowser ?  <div style={styles.browserTitle}>גל וינברג</div>: " גל וינברג" }
-     
+      <Grid.Column >
+        <Header  as='h1' style={styles.basic} size='huge'> 
+        {isBrowser ?  <div style={styles.browserTitle}>גל וינברג</div>: " גל וינברג" }
+      
+        </Header>
+        
+        <Header style={isBrowser? styles.browserInfo: styles.mobileInfo}
+        
+        >
+        סטודנט שנה רביעית <br></br>להנדסת חשמל ואלקטרוניקה 
       </Header>
-      
-      <Header style={isBrowser? styles.browserInfo: styles.mobileInfo}
-      
-      >
-      סטודנט שנה רביעית <br></br>להנדסת חשמל ואלקטרוניקה 
-     </Header>
 
-     {isBrowser ? 
-     <Header style={styles.basic} size='medium'> 
+      {isBrowser ? 
+      <Header style={styles.basic} size='medium'> 
+        בהתמחות עיבוד אות ותמונה
+      </Header>
+      : <Header style={styles.basic} size='small'> 
       בהתמחות עיבוד אות ותמונה
-     </Header>
-     : <Header style={styles.basic} size='small'> 
-    בהתמחות עיבוד אות ותמונה
-     </Header> }
-    </Grid.Column>
-    {/* {isBrowser ?   null: */}
-    <Grid.Column ><Image src={gal} size={isBrowser?  "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/></Grid.Column>
-     {/* } */}
-    </Grid>
+      </Header> }
+      </Grid.Column>
+      <Grid.Column ><Image src={gal} size={isBrowser?  "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/></Grid.Column>
 
-  </Transition>
-    
+      </Grid>
+
+      </Transition>
     
     }
-   
      </div>
   )
 }

@@ -1,13 +1,221 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.FirstPageBr{
+  cursor:pointer;
+  color:black;
+  position: absolute  ; 
+  top:30%;
+  left: 40%;
+  transform: translate(-30%, -30%);
+  width: fit-content ;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.FirstPageMb{
+  cursor:pointer;
+  color:black;
+  position: absolute  ; 
+  top: 40%;
+  left: 35%;
+  transform: translate(-35%, -40%);
+  width: fit-content ;
+
 }
+.galsImg{
+  position: absolute  ; 
+  opacity: 0.44;
+  cursor:pointer;
+
+}
+.galsImgMb{
+  position: absolute  ; 
+  opacity: 0.7;
+  left: 30%;
+  cursor:pointer;
+ 
+}
+.menu-item1{
+  color:white;
+  cursor:pointer;
+  top:9%;
+  margin: 5px;
+  position: relative;
+  /* display: flex; */
+  text-align: center;
+}
+.menu-item1:hover
+{
+  color:black;
+}
+
+.menu-item2{
+  color:white;
+  cursor:pointer;
+  top:14%;
+
+  text-align: center;
+  margin: 5px;
+  position: relative;
+  display: flex;
+}
+.menu-item2:hover
+{
+  color:black;
+}
+.menu-item3{
+  color:white;
+  cursor:pointer;
+  top:19%;
+  position: fixed ;
+  text-align: center;
+  margin: 5px;
+  position: relative;
+  display: flex;
+}
+.menu-item3:hover
+{
+  color:black;
+}
+.menu-item4{
+  color:white;
+  cursor:pointer;
+  top:24%;
+  position: fixed ;
+  text-align: center;
+  margin: 5px;
+  position: relative;
+  display: flex;
+}
+.menu-item4:hover
+{
+  color:black;
+}
+
+.menu-item5{
+  color:white;
+  cursor:pointer;
+  top:29%;
+  position: fixed ;
+  text-align: center;
+  margin: 5px;
+  position: relative;
+  display: flex;
+}
+.menu-item5:hover
+{
+  color:black;
+}
+
+.menu-item6{
+  color:white;
+  cursor:pointer;
+  top:50%;
+  position: fixed ;
+  text-align: center;
+  margin: 5px;
+  position: relative;
+  display: flex;
+  font-size: 11px;
+}
+.menu-item6:hover
+{
+  color:black;
+}
+
+.FullResumeEnglishBrowser{
+  cursor:pointer;
+  position: absolute ;
+  top:0;
+  left:50%;
+  transform: translate(-50vh, 5vh);  
+}
+.FullResumeEnglishMobile{
+  cursor:pointer;
+  position: absolute ;
+  top:5%;
+  left:10%;
+}
+
+.FullResumeHebrewMobile{
+  cursor:pointer;
+  position: absolute ;
+  top:5%;
+  left:20%;
+  transform: translate(-4vh, 5vh);  
+
+}
+
+.FullResumeHebrewBrowser{
+  cursor:pointer;
+  position: absolute ;
+  top:0;
+  left:50%;
+  transform: translate(-50vh, 5vh);  
+}
+
+.About{
+  cursor:pointer;
+  position: fixed;
+  top:30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  width: fit-content ;
+
+  }
+.AboutMB{
+  cursor:pointer;
+  position: fixed;
+  top:30%;
+  left: 40%;
+  transform: translate(-40%, -30%);
+  width: fit-content ;
+}
+
+
+.ParticlesCanvas{
+  cursor:pointer;
+  width:100%;
+  min-height: 150%;
+  max-height: 500%;
+    position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: black;
+}
+
+.BottomMenue{
+  cursor:pointer;
+ justify-content: center;
+  background-color: #373a47;
+  opacity: 0.9;
+  position:fixed !important;
+}
+
+.Icons{
+  margin-right: 20px;
+  padding: 0;
+  display: inline;
+
+}
+
+h3 {
+  list-style: none; 
+}
+  li::before {
+  content: "\2022";  
+  color: #0099cc; 
+  font-weight: bold; 
+  display: inline-block; 
+  width: 1em; 
+  
+}
+.Space{
+  height: 15%;
+  width: 100%;
+  margin: 0;
+  position: absolute; 
+}
+.Copyright{
+  right:50%;
+}
+
+    

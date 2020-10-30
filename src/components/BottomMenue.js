@@ -1,8 +1,5 @@
 import React, { Component } from 'react'
 import { Icon, Menu } from 'semantic-ui-react'
-import './Semantic.css'
-
-
 
 export default class BottomMenue extends Component {
   state = { activeItem: 'linkedin' }
@@ -11,7 +8,7 @@ export default class BottomMenue extends Component {
     const { activeItem } = this.state
 
     return (
-<div style={{color:"blue"}}>  
+    <div style={{color:"blue"}}>  
 
       <Menu icon className='BottomMenue' fixed="bottom"  widths={3} floated   >
     
@@ -39,18 +36,6 @@ export default class BottomMenue extends Component {
         >
           <Icon color='black' name='call square' size='big'  />
         </Menu.Item>
-
-{/* 
-        <Menu.Item
-          name='copyright'
-      
-      
-        >
-          <Icon color='black' name='copyright' size='big'  />
-        </Menu.Item>
-
-      */}
-
 
       </Menu>
    

@@ -1,6 +1,4 @@
 import React from 'react'
-import { Header,Placeholder,Segment} from 'semantic-ui-react'
-import '../Semantic/Semantic.css';
 import {isMobile} from "react-device-detect";
 
 function WorkEx() {
@@ -82,10 +80,6 @@ function WorkEx() {
 
     </p>
 
-
-    -
-    {/* --------------------------------------------------- */}
-  
      <h2 style={styles.jobNameBr}>אינטגרטור ותמיכה בלקוח /  </h2>
      <h2 style={styles.yearsBr}>תעשייה אווירית - אלתא </h2>
      <br></br>
@@ -101,6 +95,7 @@ function WorkEx() {
     </p>
     <br></br>
   </div>
+
   )
 
 
@@ -121,7 +116,6 @@ function WorkEx() {
     },
 
   }
-
 
 return (
   <div> 
