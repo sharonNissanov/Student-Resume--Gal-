@@ -10,8 +10,8 @@ import ScrollDowmBtn from './ScrollDowmBtn'
 import LanguageDropdown from './LanguageDropdown'
 import {Button,Icon} from 'semantic-ui-react'
 import { Switch,Route, Link, BrowserRouter as Router } from 'react-router-dom'
-import EnglishCV from '../pictures_files/EnglishCV.pdf'
-import HebrewCV from '../pictures_files/HebrewCV.pdf'
+import EnGalWainbergCV from '../pictures_files/EnGalWainbergCV.pdf'
+import HeGalWainbergCV from '../pictures_files/HeGalWainbergCV.pdf'
 import BottomMenue from './BottomMenue'
 
 export default class HamburgerMenue extends React.Component {
@@ -96,8 +96,8 @@ export default class HamburgerMenue extends React.Component {
    <a className="menu-item3" href="/Resume" > קורות חיים  <Icon name="file"/></a> }
 
 
-{chosen_language==="English"? <a className="menu-item4"  href={EnglishCV}  download ><Icon name="download"/> Download My CV</a> : 
-   <a className="menu-item4"  href={HebrewCV}  download > הורדת קורות החיים  <Icon name="download"/></a> }
+{chosen_language==="English"? <a className="menu-item4"  href={EnGalWainbergCV}  download ><Icon name="download"/> Download My CV</a> : 
+   <a className="menu-item4"  href={HeGalWainbergCV}  download > הורדת קורות החיים  <Icon name="download"/></a> }
 
 
 {chosen_language==="English"? <a className="menu-item5"  onClick={()=>{this.change_lan()}} href={"/"} ><Icon name="hello"/>עברית</a> : 

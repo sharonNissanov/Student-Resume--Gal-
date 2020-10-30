@@ -1,19 +1,22 @@
 import React, { Component } from "react";
 import Particles from "react-particles-js";
+import {isBrowser} from "react-device-detect";
 
 class Canvas extends Component {
   state = { width: 0, height:0};
   componentDidMount() {
     this.updateWindowDimensions();
-   // window.addEventListener("resize", this.updateWindowDimensions);
+    if (isBrowser) 
+      window.addEventListener("resize", this.updateWindowDimensions)
   }
   componentWillUnmount() {
-    //window.removeEventListener("resize", this.updateWindowDimensions);
+    if (isBrowser) 
+      window.removeEventListener("resize", this.updateWindowDimensions)
   }
   updateWindowDimensions = () => {
     this.setState({
       width: window.innerWidth+"px",
-      height: window.innerHeight+ 35+ "px"
+      height: window.innerHeight+ 100+ "px"
     });
   };
   render() {
