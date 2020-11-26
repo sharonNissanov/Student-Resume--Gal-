@@ -9,7 +9,7 @@ The main goal of this website was to make his resume accessible in the job searc
 👍 Contact him via mail, linkedin and phone. \
 👍 Get all the information you need in English and Hebrew. 
 
-![screenshot](src\components\pictures_files\digitalResume.jpeg)
+![screenshot](src/components/pictures_files/digitalResume.jpeg)
 
 ### Setup & Run
 - Clone or download this repository https://github.com/sharonNissanov/Student-Resume--Gal- 
