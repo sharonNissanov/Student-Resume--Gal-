@@ -40,7 +40,8 @@ function FirstPage() {
 
 
   return (
-    <div className= {isBrowser?  "FirstPageBr" : "FirstPageMb"}>
+    // className= {isBrowser?  "FirstPageBr" : "FirstPageMb"}
+    <div  className= "FirstPage">
       {chosen_language==="English"?
       
       <Transition visible={visible} animation='scale' duration={800} >  
@@ -48,7 +49,7 @@ function FirstPage() {
       textAlign="center" verticalAlign="middle">
       <Grid.Column >
         
-        <Header   style={styles.basic} size='huge'> 
+        <Header style={styles.basic} size='huge'> 
         {isBrowser ?  <div style={styles.browserTitle}>Gal Wainberg</div>: "Gal Wainberg" }
    
         </Header>
@@ -73,7 +74,7 @@ function FirstPage() {
       </Grid.Column>
       <Grid.Column >
 
-      <Image src={gal} size={isBrowser? "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/>
+      <Image src={gal} size={isBrowser? "medium" : "small"} centered  avatar className="galsImg"/>
    
       </Grid.Column>
       </Grid>
@@ -106,7 +107,7 @@ function FirstPage() {
       בהתמחות עיבוד אות ותמונה
       </Header> }
       </Grid.Column>
-      <Grid.Column ><Image src={gal} size={isBrowser?  "medium" : "small"} centered  avatar className={isBrowser?  "galsImg" : "galsImgMb"}/></Grid.Column>
+      <Grid.Column ><Image src={gal} size={isBrowser?  "medium" : "small"} centered  avatar  className="galsImg" /></Grid.Column>
 
       </Grid>
 

@@ -15,7 +15,7 @@ export default class BottomMenue extends Component {
         <Menu.Item 
           name='linkedin'
       
-          onClick={() => {window.open('https://www.linkedin.com/in/%E2%9A%A1gal-wainberg%E2%9A%A1-084259bb/')}}
+          onClick={() => {window.open('https://www.linkedin.com/in/gal-wainberg/')}}
         >
           <Icon name='linkedin square' size='big'/>
         </Menu.Item>
